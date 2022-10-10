@@ -2,7 +2,8 @@
   "project_info": {
     "project_number": "1007223090627",
     "project_id": "beasiswaku",
-    "storage_bucket": "beasiswaku.appspot.com"
+    "storage_bucket": "beasiswaku.appspot.com",
+    "firebase_url": "https://beasiswaku-default-rtdb.asia-southeast1.firebasedatabase.app"
   },
   "client": [
     {

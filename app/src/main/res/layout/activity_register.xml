@@ -91,10 +91,10 @@
             app:startIconDrawable="@drawable/ic_baseline_calendar_month_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/birth"
+                android:id="@+id/age"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
-                android:hint="Birthday" />
+                android:hint="Age" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
