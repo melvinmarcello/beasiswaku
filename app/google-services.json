@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1007223090627",
+    "project_id": "beasiswaku",
+    "storage_bucket": "beasiswaku.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007223090627:android:0aa49a037a162306c7e176",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007223090627-vh8d42v1r5ig2qh1mmu7lb22t57g4t58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKWbxM2tFpBnAgycVgr3RhEX4YUQGMVjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007223090627-vh8d42v1r5ig2qh1mmu7lb22t57g4t58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
