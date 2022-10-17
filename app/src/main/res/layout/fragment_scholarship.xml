@@ -7,102 +7,33 @@
     android:orientation="vertical"
     tools:context=".scholarship">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Find Scholarship -->"
-        android:textSize="20dp"
-        android:id="@+id/labelFindScholar"
-        android:textColor="@color/black"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="30dp"/>
 
     <LinearLayout
-        android:id="@+id/listItem1"
+        android:id="@+id/layoutScholar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:layout_below="@+id/labelFindScholar">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/labelFindScholar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Find Scholarship"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:textSize="20dp" />
 
-        <LinearLayout
-            android:id="@+id/list_item1"
-            android:layout_width="380dp"
-            android:layout_height="120dp"
-            android:background="#DFE2E2"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/g2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
-                android:text="Girls fund Scholarship 2022" />
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/listItem2"
-            android:layout_width="380dp"
-            android:layout_height="120dp"
-            android:layout_below='@+id/list_item1'
-            android:layout_marginTop="40dp"
-            android:background="#DFE2E2">
-
-            <ImageView
-
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/g3" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
-                android:text="Beasiswa Future Leader 2022" />
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/listItem3"
-            android:layout_width="380dp"
-            android:layout_height="120dp"
-            android:layout_below='@+id/listItem2'
-            android:layout_marginTop="40dp"
-            android:background="#DFE2E2">
-
-            <ImageView
-
-                android:id="@+id/imglist"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/g5" />
-
-            <TextView
-                android:id="@+id/btnScholarship"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="50dp"
-                android:text="Girls fund Scholarship 2022" />
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-
-        </LinearLayout>
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutScholar"/>
+
+
 </RelativeLayout>
