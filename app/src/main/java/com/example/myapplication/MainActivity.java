@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Home homeFragment = new Home();
     Profile profileFragment = new Profile();
     scholarship scholarshipFragment = new scholarship();
+    Consult consultFragment = new Consult();
     savedScholarship savedScholarship = new savedScholarship();
 
     @Override
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.scholarship:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, scholarshipFragment).commit();
+                        return true;
+                    case R.id.consult:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, consultFragment).commit();
                         return true;
                 }
 

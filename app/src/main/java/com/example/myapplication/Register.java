@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 public class Register extends AppCompatActivity {
     private Button btnContinue;
-    private EditText email, password, alamat, phone, age;
+    private EditText nama, email, password, alamat, phone, age;
     FirebaseAuth mAuth;
     DatabaseReference reference;
     @Override
@@ -32,6 +32,7 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         btnContinue = findViewById(R.id.continueSignup);
+        nama = findViewById(R.id.nama);
         email = findViewById(R.id.email);
         alamat = findViewById(R.id.alamat);
         phone = findViewById(R.id.phone);
@@ -43,6 +44,7 @@ public class Register extends AppCompatActivity {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String strNama = nama.getText().toString();
                 String strEmail = email.getText().toString();
                 String strAlamat = alamat.getText().toString();
                 String strPhone = phone.getText().toString();
@@ -57,16 +59,18 @@ public class Register extends AppCompatActivity {
                     phone.setError("PLEASE INPUT YOUR PHONE!");
                 }else if(strAge.isEmpty()){
                     age.setError("PLEASE INPUT YOUR AGE!");
-                }else if(strAlamat.isEmpty()){
+                }else if(strAlamat.isEmpty()) {
                     password.setError("PLEASE INPUT YOUR ADDRESS!");
+                }else if(strNama.isEmpty()){
+                    nama.setError("PLEASE INPUT YOUR NAME");
                 }else{
-                    register(strEmail, strAlamat, strPhone, strAge, strPassword);
+                    register(strNama, strEmail,strAlamat, strPhone, strAge, strPassword);
                 }
             }
         });
     }
 
-    private void register(String email, String alamat, String phone, String age,  String password){
+    private void register(String nama, String email, String alamat, String phone, String age,  String password){
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -81,6 +85,7 @@ public class Register extends AppCompatActivity {
 
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("id", userId);
+                    hashMap.put("nama", nama);
                     hashMap.put("email", email);
                     hashMap.put("alamat", alamat);
                     hashMap.put("phone", phone);
