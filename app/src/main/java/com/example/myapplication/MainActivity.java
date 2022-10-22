@@ -25,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+        Bundle intent = getIntent().getExtras();
+        if(intent != null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new scholarship()).commit();
+        }else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+        }
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
