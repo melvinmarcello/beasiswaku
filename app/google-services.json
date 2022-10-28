@@ -1,14 +1,14 @@
 {
   "project_info": {
     "project_number": "1007223090627",
+    "firebase_url": "https://beasiswaku-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "beasiswaku",
-    "storage_bucket": "beasiswaku.appspot.com",
-    "firebase_url": "https://beasiswaku-default-rtdb.asia-southeast1.firebasedatabase.app"
+    "storage_bucket": "beasiswaku.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1007223090627:android:0aa49a037a162306c7e176",
+        "mobilesdk_app_id": "1:1007223090627:android:b692396e590016b3c7e176",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }

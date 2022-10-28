@@ -1,9 +1,9 @@
 package com.example.myapplication.Model;
 
 public class Users {
-    private String age, alamat, email, id, nama, phone, profImage;
+    private String age, alamat, email, id, nama, phone, profImage, major;
 
-    public Users(String age, String alamat, String email, String id, String nama, String phone, String profImage) {
+    public Users(String age, String alamat, String email, String id, String nama, String phone, String profImage, String major) {
         this.age = age;
         this.alamat = alamat;
         this.email = email;
@@ -11,6 +11,7 @@ public class Users {
         this.nama = nama;
         this.phone = phone;
         this.profImage = profImage;
+        this.major = major;
     }
     public Users(){
 
@@ -70,5 +71,13 @@ public class Users {
 
     public void setProfImage(String profImage) {
         this.profImage = profImage;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
     }
 }
