@@ -2,4 +2,19 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="fakultasUPNVJ">
+        <item>Teknik Informatika</item>
+        <item>Sistem  Informasi</item>
+        <item>Hukum</item>
+        <item>Ekonomi</item>
+        <item>Keperawatan</item>
+        <item>Kedokteran</item>
+        <item>Bisnis</item>
+        <item>Mixue</item>
+        <item>Tolol</item>
+        <item>Idiot</item>
+        <item>Neny</item>
+        <item>Other</item>
+    </string-array>
 </resources>

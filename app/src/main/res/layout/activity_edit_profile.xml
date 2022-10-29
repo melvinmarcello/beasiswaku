@@ -28,14 +28,14 @@
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imgProfile"
-            android:layout_marginBottom="10dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/prfl"
             app:civ_border_color="@color/black"
-            app:civ_border_width="1dp"
-            android:src="@drawable/prfl"/>
+            app:civ_border_width="1dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -59,6 +59,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
+                android:inputType="textLongMessage"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
                 android:hint="Email" />
@@ -94,18 +95,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
         <Button
+            android:id="@+id/btnSaveChange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Change"
-            android:textColor="@color/black"
-            android:backgroundTint="#00FFF0"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:layout_below="@+id/btnSaveChange"/>
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#00FFF0"
+            android:text="Save Change"
+            android:textColor="@color/black" />
     </LinearLayout>
-
 
 
 </RelativeLayout>

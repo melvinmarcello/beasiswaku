@@ -31,13 +31,34 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/ic_baseline_mail_outline_24">
+            app:startIconDrawable="@drawable/ic_baseline_person_24">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textCapWords"
                 android:id="@+id/nama"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
                 android:hint="Nama Lengkap" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:id="@+id/majorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Major"
+            app:startIconDrawable="@drawable/ic_baseline_library_books_24">
+
+            <AutoCompleteTextView
+                android:id="@+id/major"
+                android:scrollbars="vertical"
+                android:dropDownHeight="200dp"
+                android:inputType="none"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -48,6 +69,7 @@
             app:startIconDrawable="@drawable/ic_baseline_mail_outline_24">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textLongMessage"
                 android:id="@+id/email"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
@@ -93,6 +115,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phone"
+                android:inputType="number"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
                 android:hint="Phone" />
@@ -108,7 +131,8 @@
                 android:id="@+id/age"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
-                android:hint="Age" />
+                android:hint="Age"
+                android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
