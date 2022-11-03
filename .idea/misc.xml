@@ -42,7 +42,11 @@
         <entry key="..\:/Kuliah/Sms 5/PrakPemprogramanMobile/Proj/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/activity_detail_scholar.xml" value="0.25" />
         <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/activity_saved_scholarship.xml" value="0.25" />
+        <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/fragment_profile.xml" value="0.4" />
         <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/fragment_scholarship.xml" value="0.25" />
+        <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/savescholarship_item.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/scholar_carditem.xml" value="0.4" />
+        <entry key="..\:/Users/Rafli Dika Pramudya/Documents/GitHub/beasiswaku/app/src/main/res/layout/scholarship_item.xml" value="0.25" />
       </map>
     </option>
   </component>
