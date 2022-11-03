@@ -52,6 +52,7 @@ public class ScholarshipAdapter extends RecyclerView.Adapter<ScholarshipAdapter.
             public void onClick(View view) {
                 SharedPreferences.Editor editor = mContext.getSharedPreferences("detail", Context.MODE_PRIVATE).edit();
                 editor.putString("id", scholarship.getId());
+                editor.putString("key", scholarship.getKey());
                 editor.apply();
                 mContext.startActivity(new Intent(mContext, detail_scholar.class));
             }

@@ -1,16 +1,25 @@
 package com.example.myapplication.Model;
 
 public class Scholarship {
-    private String desc, title, img_url, id;
+    private String desc, title, img_url, id, key;
 
-    public Scholarship(String desc, String title, String img_url, String id) {
+    public Scholarship(String desc, String title, String img_url, String id, String key) {
         this.id = id;
+        this.key = key;
         this.desc = desc;
         this.title = title;
         this.img_url = img_url;
     }
     public Scholarship(){
 
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getId() {
