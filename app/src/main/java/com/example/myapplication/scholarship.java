@@ -26,7 +26,6 @@ import java.util.List;
 
 
 public class scholarship extends Fragment {
-    private FirebaseAuth mAuth;
     private TextView labelFindScholar;
     private RecyclerView recyclerView;
     private List<Scholarship> scholarshipList;

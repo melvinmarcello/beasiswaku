@@ -106,11 +106,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
+        android:onClick="toSavedScholar"
+        android:paddingLeft="15dp"
         android:text="Saved Scholarship"
-        android:textStyle="bold"
-        android:textSize="22dp"
         android:textColor="#25383C"
-        android:paddingLeft="15dp"/>
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/pic_saved_scholarship"
@@ -146,6 +147,8 @@
 
 
     <ImageButton
+
+        android:onClick="toSavedScholar"
         android:id="@+id/btn_saved_scholarship"
         android:layout_width="24dp"
         android:layout_height="24dp"

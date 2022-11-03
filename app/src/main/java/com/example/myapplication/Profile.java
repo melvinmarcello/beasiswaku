@@ -14,12 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.Adapter.SavedScholarshipAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Profile extends Fragment {
     private TextView signOut, editProfile, strNama, strEmail;
-    private ImageView profImage;
+    private ImageView profImage, btn_saved_scholarship;
     private Button btnSaveChange;
     FirebaseAuth mAuth;
 
@@ -36,6 +37,7 @@ public class Profile extends Fragment {
         strNama = view.findViewById(R.id.name);
         strEmail = view.findViewById(R.id.email);
         profImage = view.findViewById(R.id.profileImage);
+        btn_saved_scholarship = view.findViewById(R.id.btn_saved_scholarship);
 
 
         Glide.with(getContext()).load(GlobalVariable.user.getProfImage()).into(profImage);
@@ -61,6 +63,14 @@ public class Profile extends Fragment {
             }
         });
 
+        btn_saved_scholarship.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), savedScholarship.class));
+            }
+        });
+
         return view;
     }
+
 }

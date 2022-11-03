@@ -44,6 +44,9 @@ public class detail_scholar extends AppCompatActivity {
         scholarshipId = prefs.getString("id", "none");
         scholarshipKey = prefs.getString("key", "none");
 
+        Log.i("id", scholarshipId);
+        Log.i("key", scholarshipKey);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("scholarship");
@@ -57,33 +60,33 @@ public class detail_scholar extends AppCompatActivity {
             }
         });
 
-        isSaveScholarship(scholarshipKey, saved);
+        isSaveScholarship(GlobalVariable.user.getId(), saved);
 
         saved.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (saved.getTag().equals("unsaved")){
                     FirebaseDatabase.getInstance().getReference().child("Saved_Scholarship")
-                            .child(scholarshipKey)
-                            .child(GlobalVariable.user.getId()).setValue(true);
+                            .child(GlobalVariable.user.getId())
+                            .child(scholarshipKey).setValue(true);
                 }else{
                     FirebaseDatabase.getInstance().getReference().child("Saved_Scholarship")
-                            .child(scholarshipKey)
-                            .child(GlobalVariable.user.getId()).removeValue();
+                            .child(GlobalVariable.user.getId())
+                            .child(scholarshipKey).removeValue();
                 }
 
             }
         });
 
     }
-    public void isSaveScholarship(String scholarshipKey, ImageView imageView){
+    public void isSaveScholarship(String UserId, ImageView imageView){
         mUser = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference().child("Saved_Scholarship").child(scholarshipKey);
+        reference = FirebaseDatabase.getInstance().getReference().child("Saved_Scholarship").child(UserId);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.child(GlobalVariable.user.getId()).exists()){
+                if (snapshot.child(scholarshipKey).exists()){
                     imageView.setImageResource(R.drawable.ic_saved_ribbon_fill);
                     imageView.setTag("saved");
                 }else{

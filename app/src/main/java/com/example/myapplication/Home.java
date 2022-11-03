@@ -107,6 +107,7 @@ public class Home extends Fragment {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Scholarship scholarship = dataSnapshot.getValue(Scholarship.class);
                     scholarshipList.add(scholarship);
+                    scholarship.setKey(dataSnapshot.getKey());
                 }
                 scholarImageAdapter.notifyDataSetChanged();
             }

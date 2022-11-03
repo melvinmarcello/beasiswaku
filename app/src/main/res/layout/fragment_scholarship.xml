@@ -34,7 +34,7 @@
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layoutScholar"/>
+        android:layout_below="@+id/layoutScholar" />
 
 
 </RelativeLayout>
