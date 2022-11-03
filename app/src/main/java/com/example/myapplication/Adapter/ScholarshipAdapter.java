@@ -1,6 +1,8 @@
 package com.example.myapplication.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.myapplication.Model.Scholarship;
 import com.example.myapplication.R;
+import com.example.myapplication.detail_scholar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -44,6 +47,15 @@ public class ScholarshipAdapter extends RecyclerView.Adapter<ScholarshipAdapter.
             holder.judul.setVisibility(View.VISIBLE);
             holder.judul.setText(scholarship.getTitle());
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = mContext.getSharedPreferences("detail", Context.MODE_PRIVATE).edit();
+                editor.putString("id", scholarship.getId());
+                editor.apply();
+                mContext.startActivity(new Intent(mContext, detail_scholar.class));
+            }
+        });
     }
 
     @Override

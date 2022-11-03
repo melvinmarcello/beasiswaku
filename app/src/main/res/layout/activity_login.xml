@@ -32,6 +32,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
+                android:inputType="textLongMessage"
                 android:layout_width="321dp"
                 android:layout_height="wrap_content"
                 android:hint="Email" />

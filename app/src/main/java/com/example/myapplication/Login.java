@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
     private Button btnLogin;
-    private TextView btnSignup;
+    private TextView btnSignup, forgot;
     private EditText emailText, passwordText;
     FirebaseAuth mAuth;
     FirebaseUser firebaseUser;
@@ -37,13 +38,23 @@ public class Login extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-       btnLogin = findViewById(R.id.loginbtn);
-       btnSignup = findViewById(R.id.btnsignup);
-       emailText = findViewById(R.id.email);
-       passwordText = findViewById(R.id.password);
+        btnLogin = findViewById(R.id.loginbtn);
+        btnSignup = findViewById(R.id.btnsignup);
+        emailText = findViewById(R.id.email);
+        passwordText = findViewById(R.id.password);
+        forgot = findViewById(R.id.forgot);
 
-       mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this, Forgotpassword.class));
+            }
+        });
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,12 +62,12 @@ public class Login extends AppCompatActivity {
                 String strEmail = emailText.getText().toString();
                 String strPassword = passwordText.getText().toString();
 
-                if(strEmail.isEmpty()){
+                if (strEmail.isEmpty()) {
                     emailText.setError("PLEASE INPUT YOUR EMAIL!");
-                }else if(strPassword.isEmpty()) {
+                } else if (strPassword.isEmpty()) {
                     passwordText.setError("PLEASE INPUT YOUR PASSWORD!");
-                }else{
-                    login(strEmail, strPassword );
+                } else {
+                    login(strEmail, strPassword);
                 }
             }
         });
@@ -71,18 +82,18 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private void login(String email, String password){
+    private void login(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     Toast.makeText(Login.this, "Login Succesfully!", Toast.LENGTH_LONG).show();
                     reference = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
                     reference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             GlobalVariable.user = snapshot.getValue(Users.class);
-                            startActivity(new Intent(Login.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK) );
+                            startActivity(new Intent(Login.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                         }
 
                         @Override
@@ -90,8 +101,8 @@ public class Login extends AppCompatActivity {
 
                         }
                     });
-                }else{
-                    Toast.makeText(Login.this, "Login Failed!"+ task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(Login.this, "Login Failed!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -102,13 +113,13 @@ public class Login extends AppCompatActivity {
         super.onStart();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        if(firebaseUser != null){
+        if (firebaseUser != null) {
             reference = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     GlobalVariable.user = snapshot.getValue(Users.class);
-                    startActivity(new Intent(Login.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK) );
+                    startActivity(new Intent(Login.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 }
 
                 @Override
@@ -118,7 +129,7 @@ public class Login extends AppCompatActivity {
             });
             startActivity(new Intent(Login.this, MainActivity.class));
             finish();
-        }else{
+        } else {
             mAuth.signOut();
         }
     }

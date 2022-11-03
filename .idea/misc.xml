@@ -6,7 +6,9 @@
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/drawable/ic_rectangle_516.xml" value="0.137" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/drawable/rounded_border.xml" value="0.224" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/drawable/rounded_component.xml" value="0.224" />
+        <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/activity_detail_scholar.xml" value="0.27447916666666666" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/activity_edit_profile.xml" value="0.264" />
+        <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/activity_forgotpassword.xml" value="0.27447916666666666" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/activity_register.xml" value="0.264" />
@@ -19,6 +21,8 @@
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/scholar_imageitem.xml" value="0.24365942028985507" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/scholarship_item.xml" value="0.2703125" />
         <entry key="..\:/GitHub/beasiswaku/app/src/main/res/layout/undergraduated_scholarship_items.xml" value="0.27447916666666666" />
+        <entry key="..\:/GitHub/beasiswaku/app/src/main/res/menu/action_menu.xml" value="0.2734375" />
+        <entry key="..\:/GitHub/beasiswaku/app/src/main/res/menu/bottom_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Kuliah/Sms 5/PrakPemprogramanMobile/Proj/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1005" />
         <entry key="..\:/Kuliah/Sms 5/PrakPemprogramanMobile/Proj/app/src/main/res/drawable/ic_beasiswaku.xml" value="0.1325" />
         <entry key="..\:/Kuliah/Sms 5/PrakPemprogramanMobile/Proj/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1325" />

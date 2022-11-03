@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail_scholar">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_saved_ribbon" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/g3" />
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="163dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/imgDetail"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#00FFF0"
+            android:text="Apply"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/descLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnApply"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Description:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descLabel"
+            android:layout_margin="20dp"
+            android:justificationMode="inter_word"
+            android:text="
+        Beasiswa Generasi Juara adalah jenis beasiswa Universitas Pertamina yang diberikan kepada siswa/i lulusan tahun 2022 dan 2021 yang memiliki prestasi akademik maupun non-akademik yang sangat baik di Sekolah Menengah Atas (SMA) atau Sederajat. Beasiswa ini dibuka bagi lulusan Sekolah Menengah Atas (SMA) atau sederajat yang memiliki prestasi tingkat kota/kabupaten, provinsi, nasional maupun tingkat internasional dalam bidang kompetisi yang diselenggarakan oleh Kementerian Pendidikan dan Kebudayaan, Kementerian Agama maupun kompetisi mandiri lainnya yang dipertimbangkan oleh Universitas Pertamina.
+        Persyaratan :
+        Calon mahasiswa yang mengikuti seleksi adalah siswa/i aktif sedang belajar di semester terakhir dan akan dinyatakan lulus dari SMA pada bulan Juli tahun 2022.
+        Calon mahasiswa memiliki nilai rapor semester 1 (satu) hingga semester 5 (lima) rata-rata minimum 75 (tujuh puluh lima) dari nilai maksimal 100 (seratus).
+        Lintas jurusan hanya dapat dipilih oleh siswa yang berasal dari jurusan IPA saat SMA.
+        Khusus untuk Beasiswa Generasi Juara, Beasiswa Ujung Negeri, dan Beasiswa Influencer dapat diikuti oleh peserta lulusan tahun 2021 dan 2022."
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+</RelativeLayout>
