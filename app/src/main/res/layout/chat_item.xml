@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llMessage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgPict"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_saved_scholarship"
+                    android:layout_marginLeft="20dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/g3"
+                    android:stateListAnimator="@null" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#8EF2F2"
+                    android:text="Random Text"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/ibDelete"
+                    android:layout_width="46dp"
+                    android:layout_height="45dp"
+                    android:background="#8EF2F2"
+                    android:src="@drawable/ic_baseline_delete_outline_24" />
+            </LinearLayout>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="370dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#8F8E8E" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

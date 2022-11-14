@@ -52,10 +52,14 @@
             android:textColor="@color/black"
             android:textSize="16dp" />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descLabel">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/descLabel"
             android:layout_margin="20dp"
             android:justificationMode="inter_word"
             android:text="
@@ -67,5 +71,7 @@
         Khusus untuk Beasiswa Generasi Juara, Beasiswa Ujung Negeri, dan Beasiswa Influencer dapat diikuti oleh peserta lulusan tahun 2021 dan 2022."
             android:textColor="@color/black"
             android:textSize="16dp" />
+    </ScrollView>
+
 
 </RelativeLayout>
