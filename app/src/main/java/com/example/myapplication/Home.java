@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -68,6 +69,12 @@ public class Home extends Fragment {
 
         profImage = view.findViewById(R.id.profImage);
         Glide.with(getContext()).load(GlobalVariable.user.getProfImage()).into(profImage);
+        profImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((FragmentActivity) getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.container, new Profile()).commit();
+            }
+        });
 
         //Carrousel Section
         recyclerView = view.findViewById(R.id.recycleView);
@@ -141,6 +148,4 @@ public class Home extends Fragment {
         });
 
     }
-
-
 }

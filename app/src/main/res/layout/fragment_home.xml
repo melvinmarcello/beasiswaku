@@ -20,6 +20,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="5dp"
+            android:src="@drawable/ic_baseline_person_24"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp" />
 
@@ -38,10 +39,10 @@
                 android:textSize="25dp" />
 
             <TextView
+                android:id="@+id/major"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nama"
-                android:id="@+id/major"
                 android:text="TEKNIK INFORMATIKA" />
         </LinearLayout>
 
@@ -80,7 +81,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="50dp"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
-        android:text="Undergraduated Scholarship"
+        android:text="Explore Scholarship"
         android:textColor="@color/black"
         android:textSize="18dp" />
 

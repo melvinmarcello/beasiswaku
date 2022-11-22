@@ -38,14 +38,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.chat_item, parent, false);
-
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MessageAdapter.ViewHolder holder, int position) {
         Message message = mMessage.get(position);
-        Log.i("imgpprof", message.getImgProf());
         if(message.getName().equals(GlobalVariable.name)){
             holder.tvTitle.setText("You: \n" + message.getMessage());
             holder.llMessage.setGravity(Gravity.START);

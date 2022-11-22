@@ -6,36 +6,12 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/white"
-        android:elevation="999dp"
-        android:gravity="bottom"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp">
+        android:layout_height="50dp">
 
-        <ImageView
-            android:id="@+id/btnBackSavedScholar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/ic_baseline_arrow_back_24"
-            android:backgroundTint="@color/black" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="50dp"
-            android:gravity="center"
-            android:maxLines="1"
-            android:text="Saved Scholarship"
-            android:textColor="#141414"
-            android:textSize="20dp" />
-
-    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/savedRecyclerView"

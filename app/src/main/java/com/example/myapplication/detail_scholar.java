@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -27,6 +30,7 @@ import java.util.HashMap;
 
 public class detail_scholar extends AppCompatActivity {
     private ImageButton saved;
+    private Button btnApply;
     String scholarshipId, scholarshipKey;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -39,19 +43,28 @@ public class detail_scholar extends AppCompatActivity {
         setContentView(R.layout.activity_detail_scholar);
 
         saved = findViewById(R.id.saveButton);
+        btnApply = findViewById(R.id.btnApply);
+
 
         SharedPreferences prefs = getApplicationContext().getSharedPreferences("detail", Context.MODE_PRIVATE);
         scholarshipId = prefs.getString("id", "none");
         scholarshipKey = prefs.getString("key", "none");
 
-        Log.i("id", scholarshipId);
-        Log.i("key", scholarshipKey);
-
+        reference = FirebaseDatabase.getInstance().getReference().child("Scholarship");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("scholarship");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("applyform", Context.MODE_PRIVATE).edit();
+                editor.putString("id", scholarshipId);
+                editor.apply();
+                startActivity(new Intent(detail_scholar.this, Apply_form.class));
+            }
+        });
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

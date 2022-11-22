@@ -85,7 +85,7 @@ public class Register extends AppCompatActivity {
                 }else if(strAge.isEmpty()){
                     age.setError("PLEASE INPUT YOUR AGE!");
                 }else if(strAlamat.isEmpty()) {
-                    password.setError("PLEASE INPUT YOUR ADDRESS!");
+                    alamat.setError("PLEASE INPUT YOUR ADDRESS!");
                 }else if(strNama.isEmpty()){
                     nama.setError("PLEASE INPUT YOUR NAME");
                 }else{

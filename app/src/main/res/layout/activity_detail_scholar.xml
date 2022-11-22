@@ -31,15 +31,15 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/g3" />
 
-        <Button
-            android:id="@+id/btnApply"
-            android:layout_width="163dp"
-            android:layout_height="60dp"
-            android:layout_below="@+id/imgDetail"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="#00FFF0"
-            android:text="Apply"
-            android:textColor="@color/black" />
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="163dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/imgDetail"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#00FFF0"
+        android:text="Apply"
+        android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/descLabel"
